@@ -1,0 +1,29 @@
+ .box {
+   height: 600px;
+   width: 300px;
+   display: flex;
+ }
+
+ .box1 {
+   width: 100px;
+   height: 50px;
+   background-color: black;
+ }
+
+ .box2 {
+   width: 100px;
+   height: 50px;
+   background-color: #eee;
+ }
+
+ .box3 {
+   width: 100px;
+   height: 50px;
+   background-color: red;
+ }
+
+ .box4 {
+   width: 100px;
+   height: 50px;
+   background-color: yellow;
+ }
