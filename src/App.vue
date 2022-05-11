@@ -9,6 +9,7 @@
     <div class="row-list">
       <Router-link class="row-list-a" to="/Student" active-class="active">学生 </Router-link>
       <Router-link class="row-list-b" to="/School" active-class="active">学校 </Router-link>
+      <Router-link class="row-list-b" to="/Demo" active-class="active">Demo </Router-link>
     </div>
     <div class="plac">
       <router-view></router-view>

@@ -10,6 +10,7 @@ import Detail from "../components/Detail.vue"
 import Count from "../components/count.vue"
 import Test from "../components/Test.vue"
 import User from "../components/User.vue"
+import Demo from "../components/Demo.vue"
 
 //创建并暴露一个路由器
 const router = new VueRouter({
@@ -32,7 +33,7 @@ const router = new VueRouter({
         component: Message,
         children: [{
           name: 'xiangqing',
-          path: '/Detail/:id/:title', //使用占位符声明接收params参数
+          path: '/Detail/:id/:title', //使用占位符声明接收params参数,可以指定可传或不传  在占位符后面加问号就行 id?  
           component: Detail,
           // props: true   props一种写法
           //props函数写法
@@ -53,6 +54,14 @@ const router = new VueRouter({
       path: '/Student',
       component: Student,
 
+    },
+    {
+      path: '/User',
+      component: User
+    },
+    {
+      path: '/Demo',
+      component: Demo
     }
   ]
 

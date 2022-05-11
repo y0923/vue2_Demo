@@ -15,10 +15,6 @@
 
 
     methods: {
-
-      methods: {
-
-      },
       initChart() {
 
         let myChart = echarts.init(document.getElementById('main'));
@@ -30,7 +26,7 @@
           tooltip: {},
 
           xAxis: {
-            data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+            data: this.$store.getters.xAxisdata
           },
           yAxis: {},
           series: [{
@@ -44,6 +40,7 @@
     },
     mounted() {
       this.initChart();
+      console.log('PersonList', this.$store.getters.xAxisdata)
     }
 
 
