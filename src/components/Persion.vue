@@ -3,7 +3,7 @@
     <h1>Persion 组件</h1>
     <h3>count组件和为{{$store.state.sum}}</h3>
     <input type="text" placeholder="请输入姓名" v-model="xm">
-    <input type="submit" value="提交" @click="Submit">
+    <input type="submit" value="提交" @click="Submit(xm)">
     <ul>
       <li v-for="i in PersonList" :key="i.id">{{i.xm}}</li>
     </ul>
@@ -29,10 +29,15 @@
       }
     },
     methods: {
-      Submit() {
+      Submit(xm) {
         // const PersonObj =[{nanoid(),}]
         console.log('xm:', this.xm, this.id)
         // const PersonObj =this.xm,id
+        if (!xm) {
+          alert("输入为空")
+          return false
+        }
+
 
         const PersonObj = {
           id: nanoid(),

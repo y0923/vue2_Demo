@@ -1,39 +1,30 @@
 <template>
-  <div class="row">
-    <div class="page-header">
-      <h1>Vue Router Demo</h1>
-      <button @click="back">后退</button>
-      <button @click="forward">前进</button>
-    </div>
 
-    <div class="row-list">
-      <Router-link class="row-list-a" to="/Student" active-class="active">学生 </Router-link>
-      <Router-link class="row-list-b" to="/School" active-class="active">学校 </Router-link>
-      <Router-link class="row-list-b" to="/Demo" active-class="active">Demo </Router-link>
-    </div>
-    <div class="plac">
-      <router-view></router-view>
-    </div>
+
+
+  <div class="plac">
+    <router-view />
   </div>
+
 
 </template>
 
 <script>
   export default {
-    methods: {
-      back() {
-        this.$router.back()
-      },
-      forward() {
-        this.$router.forward()
-      }
-    }
+    // methods: {
+    //   back() {
+    //     this.$router.back()
+    //   },
+    //   forward() {
+    //     this.$router.forward()
+    //   }
+    // }
 
 
   }
 </script>
 
-<style>
+<!-- <style>
   .row {
     width: 100%;
     height: 100%;
@@ -69,4 +60,4 @@
     width: 100%;
     height: 100%;
   }
-</style>
+</style> -->

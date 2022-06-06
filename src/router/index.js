@@ -9,14 +9,19 @@ import Message from "../components/Message.vue"
 import Detail from "../components/Detail.vue"
 import Count from "../components/count.vue"
 import Test from "../components/Test.vue"
-import User from "../components/User.vue"
 import Demo from "../components/Demo.vue"
+import index from "../components/index.vue"
 
 //创建并暴露一个路由器
 const router = new VueRouter({
   routes: [{
-      path: '/School',
-      component: School,
+      path: '/',
+      component: index
+    },
+    {
+      path: '/index',
+      name: index,
+      component: index,
       //二级路由
       children: [{
         path: '/Echarts',
@@ -48,21 +53,21 @@ const router = new VueRouter({
         name: 'yunsuan',
         path: '/Count',
         component: Count
+      }, {
+        path: '/School',
+        component: School,
+
+      }, {
+        path: '/Student',
+        component: Student,
+
+      }, {
+        path: '/Demo',
+        component: Demo
       }]
     },
-    {
-      path: '/Student',
-      component: Student,
 
-    },
-    {
-      path: '/User',
-      component: User
-    },
-    {
-      path: '/Demo',
-      component: Demo
-    }
+
   ]
 
 })
