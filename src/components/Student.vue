@@ -10,6 +10,7 @@
           <input type="text" placeholder="请输入用户名" v-bind="keyWord" />&nbsp; <button @click="isshow">show</button>
         </section>
       </div>
+
     </div>
 
 
@@ -24,6 +25,8 @@
 
 <script>
   import Flex from "./Flex.vue"
+  const axios = require('axios')
+  // import {installElementPlugin} from 'vue'
   // import axios from 'axios';
   export default {
     components: {
@@ -36,11 +39,12 @@
         StudentSex: '男',
         keyWord: '',
         show: true,
+
       }
     },
     methods: {
-      // getUser() {
-      //   axios.get('https://api.github.com/search/user?q=$(this.keyWord)')
+      // getBook() {
+      //   axios.get('https://localhost/8081')
       //     .then(res => {
       //       console.log("请求成功了", res.data)
       //     })

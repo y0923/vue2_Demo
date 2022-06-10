@@ -3,6 +3,7 @@ const {
 } = require('vue-loader')
 
 module.exports = {
+
   module: {
     rules: [
       // ... 其它规则
