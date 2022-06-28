@@ -50,7 +50,7 @@
     },
     methods: {
       showpush(m) {
-        // console.log(this.$route)
+        console.log(this.$router)
         this.$router.push({
           name: 'xiangqing',
           params: {

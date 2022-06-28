@@ -28,11 +28,6 @@
 </script>
 
 <style>
-  .Index {
-    width: auto;
-    height: auto;
-  }
-
   .page-header {
     text-align: center;
   }

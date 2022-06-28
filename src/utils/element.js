@@ -2,11 +2,15 @@ import {
   Table,
   TableColumn,
   Input,
-  Button
+  Button,
+  Dialog,
+  Form,
+  FormItem,
+  Pagination
 } from 'element-ui'
 
 
-const Elplugin = [Table, TableColumn, Input, Button]
+const Elplugin = [Table, TableColumn, Input, Button, Dialog, Form, FormItem, Pagination]
 
 export default (app) => {
   Elplugin.forEach(plugin => {

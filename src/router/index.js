@@ -19,6 +19,11 @@ const router = new VueRouter({
       component: index
     },
     {
+      path: '/login',
+      component: () => import('../components/login/login.vue'),
+      hidder: true
+    },
+    {
       path: '/index',
       name: index,
       component: index,

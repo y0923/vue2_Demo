@@ -15,6 +15,8 @@
     <button @click="decrement(n)">-</button>
     <button @click="incrementOdd(n)">当前求和为奇数再加</button>
     <button @click="incrementWait(n)">等一等再加</button>
+    <button @click="dispatch">测试</button>
+    <button @click="getter">测试getter</button>
     <hr>
     <div>
       <Persion />
@@ -91,11 +93,16 @@
         decrement: 'jian',
         incrementOdd: 'Odd',
         incrementWait: 'jiawait'
-      })
+      }),
+      dispatch() {
+        console.log("dispatch>>>", this.$store.dispatch('dispatch_tableDate'))
+      },
+      getter() {
+        console.log('getter>>', this.$store.getters)
+      }
     },
     mounted() {
-      console.log('App', this.$store)
-
+      console.log('store>>>>>', this.$store)
     }
   }
 </script>

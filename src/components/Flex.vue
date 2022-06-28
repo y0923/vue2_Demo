@@ -60,7 +60,7 @@
 
 
 
-<style>
-  @import "../assets/User.css";
-  @import "../assets/Flex.css";
+<style scoped>
+  /* @import "../assets/User.css";
+  @import "../assets/Flex.css"; */
 </style>
