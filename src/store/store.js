@@ -34,6 +34,33 @@ const actions = {
     }).catch(err => {
       console.log('请求失败', err.data)
     })
+  },
+
+  dispatch_FormInfo(context, value) {
+    // post({
+    //   path: '/Users/login',
+    //   method: 'post',
+    //   name: value.name,
+    //   psd: value.psd
+    // }).then(res => {
+    //   console.log(res)
+    // }).catch(err => {
+    //   console.log('登陆失败', err)
+    //   console.log('登陆失败value', value.name)
+    // })
+    post.post('/Users/login', {
+      name: value.name,
+      psd: value.psd
+    }).then(res => {
+      console.log(res)
+      if (res.data.code === 1) {
+        console.log('登录成功')
+        context.commit('set_FormInfo', res.data.data)
+
+      }
+    }).catch(err => {
+      console.log(value)
+    })
   }
 
 }
@@ -61,6 +88,11 @@ const mutations = {
   set_tableData(state, arr) {
     state.tableData = Object.assign([], arr)
     console.log("set_tableData...", state)
+  },
+  set_FormInfo(state, arr) {
+    state.FormInfo = Object.assign({}, arr)
+    console.log("arr>>>", arr)
+
   }
 }
 
@@ -75,7 +107,12 @@ const state = {
   }],
   xAxisdata: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
   //请求后台数据用来保存
-  tableData: []
+  tableData: [],
+  FormInfo: {
+    id: '',
+    name: '',
+    psd: ''
+  }
 }
 
 //getters用于加工数据源state中数据 
@@ -85,7 +122,8 @@ const getters = {
   // }
   bigSum: (state, value) => state.sum * 10,
   xAxisdata: state => state.xAxisdata,
-  get_tableData: state => state.tableData
+  get_tableData: state => state.tableData,
+  get_FormInfo: (state, v) => state.FormInfo = v
 
 }
 //在这应用vuex 插件 如果在main文件会报错

@@ -12,6 +12,9 @@ module.exports = defineConfig({
     proxy: {
       "^/Books": {
         target: 'http://localhost:8081'
+      },
+      "^/Users": {
+        target: 'http://localhost:8081'
       }
     }
   }

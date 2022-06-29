@@ -15,11 +15,8 @@ import index from "../components/index.vue"
 //创建并暴露一个路由器
 const router = new VueRouter({
   routes: [{
+
       path: '/',
-      component: index
-    },
-    {
-      path: '/login',
       component: () => import('../components/login/login.vue'),
       hidder: true
     },

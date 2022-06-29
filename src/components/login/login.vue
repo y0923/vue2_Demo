@@ -7,17 +7,17 @@
       </div>
 
       <el-form-item>
-        <el-input placeholder="用户名" name="username" type="text" tabindex="1" v-model="FormInfo.username" />
+        <el-input placeholder="用户名" name="username" type="text" tabindex="1" v-model="FormInfo.name" />
       </el-form-item>
 
       <el-form-item>
-        <el-input placeholder="密码" name="password" tabindex="2" v-model="FormInfo.password" />
+        <el-input placeholder="密码" name="password" tabindex="2" v-model="FormInfo.psd" />
       </el-form-item>
 
       <el-button @click="submit('FormInfo')" type="primary" style="width:100%;margin-bottom:30px;">登录</el-button>
 
       <div class="tips">
-        <span style="margin-right:20px;">username: admin</span>
+        <span style="margin-right:20px;">username: zhangsan</span>
         <span> password: 123</span>
       </div>
 
@@ -30,14 +30,18 @@
     data() {
       return {
         FormInfo: {
-          username: "",
-          password: ""
+          name: "",
+          psd: ""
         }
       }
     },
     methods: {
-      submit() {
-        console.log("提交")
+      submit(FormInfo) {
+        console.log("发送数据", this.FormInfo)
+        this.$store.dispatch('dispatch_FormInfo', this.FormInfo)
+        console.log("router>>>", this.$router)
+        this.$router.push('/index')
+
       }
 
     }
